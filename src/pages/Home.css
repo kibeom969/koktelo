@@ -1,0 +1,289 @@
+/* 홈 전체 로딩 스켈레톤 공통 */
+.home-skel {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+}
+
+.home-skel::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.06) 50%,
+    transparent 100%
+  );
+  animation: hero-shimmer 1.6s infinite;
+}
+
+.home-skel-h1 {
+  height: 100px;
+  width: 80%;
+  margin-bottom: 24px;
+}
+
+.home-skel-desc {
+  height: 18px;
+  width: 90%;
+  margin-bottom: 12px;
+}
+
+.home-skel-desc--sm {
+  width: 60%;
+  margin-bottom: 36px;
+}
+
+.home-skel-btn {
+  height: 48px;
+  width: 140px;
+  border-radius: var(--radius-lg);
+}
+
+.home-skel-section-title {
+  height: 28px;
+  width: 160px;
+  margin-bottom: 8px;
+}
+
+.home-skel-section-sub {
+  height: 16px;
+  width: 120px;
+}
+
+.hero {
+  padding: 60px 0 80px;
+  overflow: hidden;
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1fr 480px;
+  gap: 60px;
+  align-items: start;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 580px;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  color: var(--text-primary);
+}
+
+.hero-description {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 36px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero-today {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hero-today-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.hero-today-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.hero-today-subtitle {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.hero-today-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  height: 590px;
+}
+
+.hero-today-skeleton {
+  background: var(--bg-card);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  height: 590px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 공통 shimmer */
+.hero-today-skeleton [class^="hero-skel-"] {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-secondary);
+}
+
+.hero-today-skeleton [class^="hero-skel-"]::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.06) 50%,
+    transparent 100%
+  );
+  animation: hero-shimmer 1.6s infinite;
+}
+
+@keyframes hero-shimmer {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* 이미지 자리 */
+.hero-skel-image {
+  width: 100%;
+  height: 360px;
+  flex-shrink: 0;
+}
+
+/* 하단 정보 */
+.hero-skel-info {
+  padding: 28px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+/* 카테고리 배지 */
+.hero-skel-badge {
+  width: 110px;
+  height: 24px;
+  border-radius: var(--radius-sm);
+}
+
+/* 칵테일 이름 */
+.hero-skel-name {
+  width: 60%;
+  height: 28px;
+  border-radius: var(--radius-md);
+}
+
+/* 글래스 텍스트 */
+.hero-skel-glass {
+  width: 40%;
+  height: 16px;
+  border-radius: var(--radius-sm);
+}
+
+/* 버튼 */
+.hero-skel-btn {
+  width: 130px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  margin-top: 4px;
+}
+
+.hero-today-image-wrapper {
+  width: 100%;
+  height: 360px;
+  overflow: hidden;
+}
+
+.hero-today-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.hero-today-card:hover .hero-today-image {
+  transform: scale(1.03);
+}
+
+.hero-today-info {
+  padding: 28px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hero-today-category {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent-primary);
+  background: rgba(249, 115, 22, 0.15);
+  border-radius: var(--radius-sm);
+  width: fit-content;
+}
+
+.hero-today-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.hero-today-glass {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.section--dark {
+  background: var(--bg-secondary);
+}
+
+.section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+.section--popular {
+  background: var(--bg-primary);
+}
+
+.popular-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+

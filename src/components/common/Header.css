@@ -1,0 +1,138 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header-container {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  height: 56px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  transition: opacity var(--transition-fast);
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+.logo-icon {
+  color: var(--accent-primary);
+}
+
+.logo-text {
+  color: var(--accent-primary); /* 또는 원하는 특정 색상 코드 (예: #F48024) */
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-link {
+  padding: 10px 16px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.nav-link:hover {
+  color: var(--text-primary);
+  background: var(--bg-card);
+}
+
+.nav-link--active {
+  color: var(--text-primary);
+  background: var(--bg-card);
+}
+
+.nav-auth {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.user-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.logout-btn:hover {
+  color: var(--error);
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.auth-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.auth-link {
+  padding: 10px 18px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.auth-link:hover {
+  color: var(--text-primary);
+}
+
+.auth-link--primary {
+  background: var(--accent-primary);
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+.auth-link--primary:hover {
+  background: var(--accent-primary-hover);
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+

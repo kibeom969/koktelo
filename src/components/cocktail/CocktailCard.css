@@ -1,0 +1,113 @@
+.cocktail-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.cocktail-card:hover {
+  border-color: var(--border-color-hover);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.cocktail-card:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+}
+
+.cocktail-card-image-wrapper {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+
+.cocktail-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.cocktail-card:hover .cocktail-card-image {
+  transform: scale(1.05);
+}
+
+.cocktail-card-favorite {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: rgba(10, 10, 10, 0.7);
+  backdrop-filter: blur(8px);
+  border-radius: 50%;
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+  opacity: 0;
+}
+
+.cocktail-card:hover .cocktail-card-favorite {
+  opacity: 1;
+}
+
+.cocktail-card-favorite:hover {
+  background: rgba(10, 10, 10, 0.9);
+  color: var(--error);
+}
+
+.cocktail-card-favorite--active {
+  opacity: 1;
+  color: var(--error);
+}
+
+.cocktail-card-category {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  padding: 6px 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  background: rgba(10, 10, 10, 0.7);
+  backdrop-filter: blur(8px);
+  border-radius: var(--radius-sm);
+}
+
+.cocktail-card-content {
+  padding: 16px;
+}
+
+.cocktail-card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cocktail-card-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+}
+
+.cocktail-card-badge--alcoholic {
+  background: rgba(249, 115, 22, 0.15);
+  color: var(--accent-primary);
+}
+
+.cocktail-card-badge--non-alcoholic {
+  background: rgba(34, 197, 94, 0.2);
+  color: var(--success);
+}

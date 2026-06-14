@@ -1,0 +1,151 @@
+/* src/components/cocktail/CocktailDetailSkeleton.css */
+
+/* 공통 뼈대 셀 */
+.skel {
+  background: var(--bg-card);
+  border-radius: var(--radius-sm);
+  position: relative;
+  overflow: hidden;
+}
+
+.skel::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.06) 50%,
+    transparent 100%
+  );
+  animation: shimmer 1.6s infinite;
+}
+
+@keyframes shimmer {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* 레이아웃 */
+.skel-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skel-detail-header {
+  display: flex;
+  gap: 20px;
+}
+
+.skel-image {
+  width: 180px;
+  height: 180px;
+  border-radius: var(--radius-lg);
+  flex-shrink: 0;
+}
+
+.skel-detail-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  justify-content: center;
+}
+
+.skel-title {
+  height: 28px;
+  width: 70%;
+  border-radius: var(--radius-md);
+}
+
+.skel-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.skel-tag {
+  height: 30px;
+  width: 80px;
+  border-radius: var(--radius-md);
+}
+
+.skel-tag--sm {
+  width: 60px;
+}
+
+/* 섹션 제목 */
+.skel-section-title {
+  height: 18px;
+  width: 100px;
+  border-radius: var(--radius-sm);
+}
+
+.skel-section-title--mt {
+  margin-top: 8px;
+}
+
+/* 재료 그리드 */
+.skel-ingredients {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 10px;
+}
+
+.skel-ingredient-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+}
+
+.skel-ing-img {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+
+.skel-ing-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.skel-ing-name {
+  height: 13px;
+  width: 80%;
+  border-radius: var(--radius-sm);
+}
+
+.skel-ing-measure {
+  height: 11px;
+  width: 50%;
+  border-radius: var(--radius-sm);
+}
+
+/* 텍스트 줄 */
+.skel-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.skel-line {
+  height: 13px;
+  width: 100%;
+  border-radius: var(--radius-sm);
+}
+
+.skel-line--80 {
+  width: 80%;
+}
+
+.skel-line--60 {
+  width: 60%;
+}

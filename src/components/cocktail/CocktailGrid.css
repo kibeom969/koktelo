@@ -1,0 +1,81 @@
+.cocktail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.cocktail-grid-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  padding: 40px;
+  text-align: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+}
+
+.cocktail-grid-empty p {
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+/* 카드 스켈레톤 */
+.cocktail-card-skeleton {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.cocktail-card-skeleton [class^="ccs-"] {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-secondary);
+}
+
+.cocktail-card-skeleton [class^="ccs-"]::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.06) 50%,
+    transparent 100%
+  );
+  animation: ccs-shimmer 1.6s infinite;
+}
+
+@keyframes ccs-shimmer {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.ccs-image {
+  aspect-ratio: 1;
+  width: 100%;
+}
+
+.ccs-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: var(--bg-card);
+}
+
+.ccs-title {
+  height: 16px;
+  width: 70%;
+  border-radius: var(--radius-sm);
+}
+
+.ccs-badge {
+  height: 22px;
+  width: 90px;
+  border-radius: var(--radius-sm);
+}
+
+

@@ -1,0 +1,71 @@
+/* src/components/recommend/AiTab.css */
+
+.ai-notice {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  background: rgba(255, 193, 7, 0.1);
+  border: 1px solid rgba(255, 193, 7, 0.3);
+  border-radius: 8px;
+  font-size: 0.875rem;
+  color: #b8860b;
+}
+
+/* 2단 split 레이아웃 */
+.ai-layout {
+  display: flex;
+  flex-direction: column;
+}
+
+.ai-layout--split {
+  display: grid;
+  grid-template-columns: 600px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.ing-layout {
+  display: flex;
+  flex-direction: column;
+}
+
+.ing-layout--split {
+  display: grid;
+  grid-template-columns: 600px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+/* 왼쪽 미리보기 패널 */
+.ai-preview-pane {
+  top: 100px;
+  padding: 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  overflow-y: auto;
+  max-height: calc(100vh - 140px);
+}
+
+.ai-preview-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+/* ai-preview-pane 안에서 스켈레톤 색상 오버라이드 */
+.ai-preview-pane .skel {
+  background: var(--bg-secondary);
+}
+
+.ai-preview-pane .skel-ingredient-item {
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+}
+
+

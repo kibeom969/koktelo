@@ -1,0 +1,164 @@
+/* src/components/cocktail/CocktailDetailPreview.css */
+/* 추천 페이지 ai-preview-pane (600px) 전용 칵테일 상세 스타일 */
+
+.cdp-header {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.cdp-image {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  flex-shrink: 0;
+}
+
+.cdp-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cdp-title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.cdp-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.cdp-favorite {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  color: var(--text-secondary);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.cdp-favorite:hover {
+  border-color: var(--error);
+  color: var(--error);
+}
+
+.cdp-favorite--active {
+  color: var(--error);
+  border-color: var(--error);
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.cdp-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.cdp-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 10px;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+}
+
+.cdp-tag--alcoholic {
+  background: rgba(249, 115, 22, 0.15);
+  color: var(--accent-primary);
+}
+
+.cdp-tag--non-alcoholic {
+  background: rgba(34, 197, 94, 0.15);
+  color: var(--success);
+}
+
+/* 섹션 공통 */
+.cdp-section {
+  margin-bottom: 18px;
+}
+
+.cdp-section:last-child {
+  margin-bottom: 0;
+}
+
+.cdp-section-title {
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* 재료 그리드 */
+.cdp-ingredients {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.cdp-ingredient {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+}
+
+.cdp-ingredient-image {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.05);
+  flex-shrink: 0;
+}
+
+.cdp-ingredient-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.cdp-ingredient-name {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cdp-ingredient-measure {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* 만드는 방법 */
+.cdp-instructions {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
